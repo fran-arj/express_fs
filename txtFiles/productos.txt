@@ -1,0 +1,20 @@
+[
+  {
+    "tittle": "Monitor",
+    "price": "125",
+    "thumbnail": "monitor.png",
+    "id": 1
+  },
+  {
+    "tittle": "Impresora",
+    "price": "222",
+    "thumbnail": "print.png",
+    "id": 2
+  },
+  {
+    "tittle": "laptop",
+    "price": "333",
+    "thumbnail": "lapt.png",
+    "id": 3
+  }
+]

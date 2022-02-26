@@ -7,11 +7,12 @@ const server = app.listen(PORT, () => {
 server.on('error', (error) => console.log(`Error en servidor ${error}`));
 //
 app.get('/', (req, res) => {
-  res.send({ mensaje: 'hola mundo' });
+  res.send('Bienvenido!');
 });
 //endpoint - rutas
-let contador = 58;
-app.get('/visitas', (req, res) => {
-  contador++;
-  res.send(`<h2>Bienvenido nro. ${contador}</h2>`);
+app.get('/productos', (req, res) => {
+  res.send(`<h2>Productos</h2>`);
+});
+app.get('/productoRandom', (req, res) => {
+  res.send(`<h2>Producto Random</h2>`);
 });
