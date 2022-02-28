@@ -21,11 +21,8 @@ app.get('/productos', (req, res) => {
   const misDatos = new Contenedor(miArchivo);
   const resultAll = async () => {
     const productos = await misDatos.getAll();
-    console.table(productos);
     productos.map((p) => {
-      console.log(p.tittle);
       salida += `<p>${p.tittle}</p>`;
-      console.log(salida);
     });
     res.send(`<h2>Productos</h2>${salida}`);
   };
@@ -41,7 +38,6 @@ app.get('/productoRandom', (req, res) => {
     const lengthObj = await misDatos.lengthObj();
     let randomNumber = generateRandomInteger(lengthObj);
     const producto = await misDatos.getById(randomNumber);
-    console.table(producto);
     salida = `<p>${producto.tittle}</p>`;
     salida += `<p>${producto.thumbnail}</p>`;
     salida += `<p>${producto.price}</p>`;
