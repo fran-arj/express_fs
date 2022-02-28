@@ -73,4 +73,14 @@ module.exports = class Contenedor {
       return false;
     }
   }
+  // Recibe un objeto, lo guarda en el archivo, devuelve el id asignado.
+  async lengthObj() {
+    try {
+      let contenidoActual = await this.getAll();
+      const ids = contenidoActual.map((e) => e.id);
+      return ids.length;
+    } catch (error) {
+      return error;
+    }
+  }
 };
